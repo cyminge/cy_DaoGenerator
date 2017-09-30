@@ -9,12 +9,11 @@
 			<column name="groupSeq" type="Int" notnull="true" /> <!-- 当前存储的群组信息的序列号 -->
 			<column name="groupName" type="String" />
 			<column name="groupAvatar" type="String" />
-			<column name="createTime" type="Int" notnull="true" />
-			<column name="creator" type="Int" notnull="true" /><!-- 群创建者 -->
-			<column name="groupMemNum" type="Int" notnull="true" />
+			<column name="createTime" type="Long" notnull="true" />
+			<column name="creator" type="Long" notnull="true" /><!-- 群创建者 -->
 			<column name="groupDescribe" type="String" /><!-- 群描述 -->
 		    <column name="flag" type="Int" notnull="true" /> <!-- 删除等标志  0：未删除  1：删除-->
-		    <column name="adminer" type="Int" notnull="true" /><!-- 群管理员 -->
+		    <column name="adminer" type="Long" notnull="true" /><!-- 群管理员 -->
 		</table>
 		
 		<!-- 群组成员列表 -->
@@ -32,6 +31,7 @@
 			<column name="uid" type="Long" primary="true" notnull="true" />
 			<column name="userName" type="String" />
 			<column name="alias" type="String" /> <!-- 别名 -->
+			<column name="age" type="Int"/>
 			<column name="userAvatar" type="String" />
 			<column name="area" type="String" /> <!-- city -->
 			<column name="phoneNum" type="String" />
@@ -40,7 +40,8 @@
 			<column name="hobby" type="String" /> <!-- 兴趣爱好 -->
 			<column name="vip" type="Int" />
 			<column name="sortLetters" type="String" />
-			<column name="status" type="Int" notnull="true" ></column><!-- 状态，删除，初始化等 -->
+			<column name="status" type="Int" notnull="true"/><!-- 状态，删除，初始化等 -->
+			<column name="edu" type="String" notnull="true"/> <!-- 学历-->
 		</table>
 		
 		<!-- 聊天信息 -->
